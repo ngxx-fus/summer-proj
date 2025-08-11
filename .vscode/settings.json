@@ -1,8 +1,10 @@
 {
-    "C_Cpp.errorSquiggles": "enabled",
     "files.associations": {
         "*.c": "c",
         "*.cpp": "cpp",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "freertos.h": "c",
+        "gpio.h": "c",
+        "task.h": "c"
     }
 }
