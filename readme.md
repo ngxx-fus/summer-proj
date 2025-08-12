@@ -30,6 +30,9 @@ upload_port = /dev/ttyUSB0
 This part focuses on writing drivers to control I/O. Additionally, this part will familiarize you with ESP-IDF development, including project structure, build process, and debugging.
 
 ## OLED (128x64) display 
+### I2C Bit-banging
+    
+    DONE :>
 
 ## Measure temperature and humidity
 
