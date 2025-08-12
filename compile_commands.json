@@ -1,0 +1,8 @@
+[
+  {
+    "directory": "/home/fus/SummerProj",
+    "command": "/home/fus/.platformio/packages/toolchain-xtensa-esp32/bin/xtensa-esp32-elf-gcc -I/home/fus/.platformio/packages/ -I/home/fus/.platformio/packages/framework-espidf/components/freertos/config/include -I/home/fus/.platformio/packages/framework-espidf/components/esp_common/include -I/home/fus/.platformio/packages/framework-espidf/components/driver/include -I/home/fus/Documents/SummerProj/include -DESP_PLATFORM -std=gnu99 -DDEBUG -c src/main.c -o src/main.o",
+    "file": "src/main.c"
+  }
+]
+

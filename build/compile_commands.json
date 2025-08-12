@@ -1,0 +1,13 @@
+[
+  {
+    "directory": "/home/fus/Documents/SummerProj",
+    "command": "/home/fus/.platformio/packages/toolchain-xtensa-esp32/bin/xtensa-esp32-elf-gcc -Iinclude -Ifreertos/include -Icomponents/driver/include -DDEBUG -c src/main.c -o src/main.o",
+    "file": "src/main.c"
+  },
+  {
+    "directory": "/home/fus/Documents/SummerProj",
+    "command": "/home/fus/.platformio/packages/toolchain-xtensa-esp32/bin/xtensa-esp32-elf-gcc -Iinclude -Ifreertos/include -Icomponents/driver/include -DDEBUG -c src/app.c -o src/app.o",
+    "file": "src/app.c"
+  }
+]
+

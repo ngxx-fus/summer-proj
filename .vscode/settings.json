@@ -5,6 +5,26 @@
         "stdio.h": "c",
         "freertos.h": "c",
         "gpio.h": "c",
-        "task.h": "c"
+        "task.h": "c",
+        "esp_log.h": "c",
+        "stdbool.h": "c",
+        "sdkconfig.h": "c",
+        "stdint.h": "c",
+        "hw_setup.h": "c",
+        "cstdint": "c",
+        "portmacro.h": "c",
+        "semphr.h": "c",
+        "oled128x64.h": "c",
+        "charconv": "c",
+        "optional": "c",
+        "format": "c",
+        "system_error": "c",
+        "array": "c",
+        "functional": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "utility": "c",
+        "random": "c",
+        "i2c_com.h": "c"
     }
 }
