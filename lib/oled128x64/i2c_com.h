@@ -43,13 +43,10 @@ Normal send (write op):
 
 #include <stdarg.h>
 #include <stdint.h>
+#include "hal/gpio_ll.h"
+#include "soc/gpio_struct.h"
 #include "driver/gpio.h"
-#include "esp_log.h"
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-#include "freertos/portmacro.h"
-#include "freertos/semphr.h"
-#include "esp_task_wdt.h"
+#include "esp_rom_sys.h"
 
 #if defined(I2CCOM_LOG)
 
@@ -96,25 +93,44 @@ Normal send (write op):
 #endif
 
 #ifndef set_scl
-#define set_scl(level) gpio_set_level(__scl, level)
+// #define set_scl(level) (level)?(GPIO.out_w1ts = (1 << (__scl))):(GPIO.out_w1tc = (1 << (__scl)));
+static inline void set_scl(int level) {
+    if (level) {
+        GPIO.out_w1ts = (1 << __scl);
+    } else {
+        GPIO.out_w1tc = (1 << __scl);
+    }
+}
+
+
+
 #endif 
 
 #ifndef set_sda
-#define set_sda(level) gpio_set_level(__sda, level)
+// #define set_sda(level) (level)?(GPIO.out_w1ts = (1 << (__sda))):(GPIO.out_w1tc = (1 << (__sda)));
+static inline void set_sda(int level) {
+    if (level) {
+        GPIO.out_w1ts = (1 << __sda);
+    } else {
+        GPIO.out_w1tc = (1 << __sda);
+    }
+}
 #endif
 
 #ifndef i2c_com_delay
-#define i2c_com_delay(__stick)
+// #define i2c_com_delay(__stick)
 // #define i2c_com_delay(__stick) vTaskDelay(__stick);
-// #define i2c_com_delay(__us) esp_rom_delay_us(__us)
+#define i2c_com_delay(__us) esp_rom_delay_us(__us)
 #endif 
 
 #ifndef get_sda
-#define get_sda() gpio_get_level(__sda)
+#define get_sda() ((GPIO.in >> __sda) & 0x1)
+// #define get_sda() gpio_get_level(__sda)
 #endif
 
 #ifndef get_scl
-#define get_scl() gpio_get_level(__scl)
+#define get_scl() ((GPIO.in >> __scl) & 0x1)
+// #define get_scl() gpio_get_level(__scl)
 #endif
 
 #ifndef logic_cast
@@ -123,6 +139,7 @@ Normal send (write op):
 
 #ifndef wait_for_scl
 #define wait_for_scl 
+// #define wait_for_scl for(uint32_t t_wait = 0; t_wait < 1000 && get_scl() == 0; ++t_wait);
 // #define wait_for_scl for(uint32_t t_wait = 0; t_wait < 1000 && get_scl() == 0; ++t_wait) i2c_com_delay(1);
 #endif 
 
@@ -132,12 +149,12 @@ Normal send (write op):
 
 
 void         i2c_config_headers();
-/*static inline */void  i2c_start_condition();
-/*static inline */void  i2c_stop_condition();
-/*static inline */void  scl_mono_pulse();
-/*static inline */void  i2c_send_address_frame(uint8_t address_7bit, uint8_t mode);
-/*static inline */void  i2c_send_data_frame(uint8_t address_7bit);
-/*static inline */uint8_t i2c_get_response();
+static inline void  i2c_start_condition();
+static inline void  i2c_stop_condition();
+static inline void  scl_mono_pulse();
+static inline void  i2c_send_address_frame(uint8_t address_7bit, uint8_t mode);
+static inline void  i2c_send_data_frame(uint8_t address_7bit);
+static inline uint8_t i2c_get_response();
 uint8_t      i2c_read_byte(uint8_t address_7bit);
 uint8_t      i2c_read_byte_array(uint8_t address_7bit, uint8_t amount);
 uint8_t      i2c_send_word(uint8_t address_7bit, uint8_t byte_h, uint8_t byte_l);
@@ -177,7 +194,7 @@ void i2c_config_headers(){
     #endif
 }
 
-/*static inline */void i2c_start_condition(){
+static inline void i2c_start_condition(){
     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x3)
         i2ccom_log("[>>>] i2c_start_condition()");
     #endif
@@ -191,7 +208,7 @@ void i2c_config_headers(){
     #endif
 }
 
-/*static inline */void i2c_stop_condition(){
+static inline void i2c_stop_condition(){
     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x3)
         i2ccom_log("[>>>] i2c_stop_condition()");
     #endif
@@ -205,7 +222,7 @@ void i2c_config_headers(){
     #endif
 }
 
-/*static inline */void scl_mono_pulse(){
+static inline void scl_mono_pulse(){
     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x4)
         i2ccom_log("[>>>] scl_mono_pulse()");
     #endif
@@ -239,7 +256,7 @@ void i2c_send_address_frame(uint8_t address_7bit, uint8_t mode){
     #endif
 }
 
-/*static inline */void i2c_send_data_frame(uint8_t data){
+static inline void i2c_send_data_frame(uint8_t data){
     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x2)
         i2ccom_log("[>>>] i2c_send_data_frame()");
     #endif
@@ -258,7 +275,7 @@ void i2c_send_address_frame(uint8_t address_7bit, uint8_t mode){
     #endif
 }
 
-/*static inline */uint8_t i2c_get_response(){
+static inline uint8_t i2c_get_response(){
     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x5)
         i2ccom_log("[>>>] i2c_get_response()");
     #endif

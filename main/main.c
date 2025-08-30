@@ -54,6 +54,7 @@ void screenctl(void *pvParameters) {
                         break;
                     case OLED_ON:
                         __log("MODE: OLED_ON");
+                        oled_on();
                         oled_flush();
                         gpio_set_level(LED0, 0);
                         break;
@@ -71,13 +72,29 @@ void screenctl(void *pvParameters) {
 
 void screen_test(void *pvParameters) {
     __entry("screen_test(...)");
-    oled_show_RAM_content();
-    // for(uint16_t i = 0; i < 1024; ++i){
-    //     oled_canvas[i] = (uint8_t)(i & 0xF);
-    // }
-    oled_flush();
+    // xy_t x = 40;
+    // xy_t y = 20;
+    // xy_t d = 5;
+    // oled_draw_empty_rect(x, y, x+15, y+15, d, COLOR_WHITE);
+    // x = 15, y = 90;
+    // oled_draw_empty_rect(x, y, x+15, y+15, d, COLOR_WHITE);
     
-
+    // for(uint16_t i = 0; i < 1024; ++i) {
+    //     oled_canvas[i] = 0xFF;
+    //     oled_flush();
+    //     vTaskDelay(1);
+    // }
+    for( ; ; ){
+        xy_t x = ((random()%64)+64)%64;
+        xy_t y = ((random()%128)+128)%128;
+        xy_t x1 = (random()%2)?x:(2*x);
+        xy_t y1 = (random()%y)?x:(2*y);
+        xy_t d = ((random()%3)+3)%3;
+        oled_draw_empty_rect(x, y, x1, y1, d, (random()%2)?COLOR_BLACK:COLOR_WHITE);
+        vTaskDelay(1);
+        oled_flush();
+        vTaskDelay(1);
+    }
     vTaskDelete(NULL);
     __exit("screen_test(...)");
 }
@@ -93,7 +110,6 @@ void global_init(){
 }
 
 void app_main(void){
-    ESP_ERROR_CHECK(esp_task_wdt_add(NULL));
     __entry("app_main()");
     global_init();
     __log("[+task] screenctl");
@@ -102,18 +118,18 @@ void app_main(void){
         "ScreenTask",
         2048,
         NULL,
-        5,
+        7,
         NULL
     );
     __log("[+task] screen_test");
-    // xTaskCreate(
-    //     screen_test,        
-    //     "ScreenTest",
-    //     2048, 
-    //     NULL,
-    //     5,
-    //     NULL
-    // );
+    xTaskCreate(
+        screen_test,        
+        "ScreenTest",
+        2048, 
+        NULL,
+        2,
+        NULL
+    );
     __exit("app_main()");
 }
 

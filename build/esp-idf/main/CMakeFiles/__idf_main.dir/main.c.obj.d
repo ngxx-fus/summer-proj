@@ -117,5 +117,16 @@ esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj: \
  /home/fus/Documents/hello_world/include/hw_setup.h \
  /home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h \
  /home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h \
- /home/fus/.fus/esp-idf/components/esp_system/include/esp_task_wdt.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/gpio_ll.h \
+ /home/fus/.fus/esp-idf/components/soc/include/soc/gpio_periph.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_struct.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h \
+ /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/misc.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/string.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/strings.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/string.h \
  /home/fus/Documents/hello_world/lib/oled128x64/oled128x64_cmds.h

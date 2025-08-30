@@ -1,0 +1,58 @@
+In file included from /home/fus/Documents/hello_world/include/main.h:24,
+                 from /home/fus/Documents/hello_world/main/main.c:1:
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h: In function 'oled_draw_empty_rect':
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:60:39: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+   60 | #define __xy_check(x, y)        (((x) >= __min_x) && ((x) <= __max_x) && \
+      |                                       ^~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:147:9: note: in expansion of macro '__xy_check'
+  147 |     if(!__xy_check(xTL, yTL))   return;
+      |         ^~~~~~~~~~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:61:38: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+   61 |                                 ((y) >= __min_y) && ((y) <= __max_y))
+      |                                      ^~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:147:9: note: in expansion of macro '__xy_check'
+  147 |     if(!__xy_check(xTL, yTL))   return;
+      |         ^~~~~~~~~~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:51:42: error: 'x' undeclared (first use in this function)
+   51 | #define __inv_mask(i)           (~__mask(x))
+      |                                          ^
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:50:38: note: in definition of macro '__mask'
+   50 | #define __mask(i)               (1<<(i))
+      |                                      ^
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:57:53: note: in expansion of macro '__inv_mask'
+   57 | #define __write_0_at(x, y)      (__byte_at(x, y) &= __inv_mask(__bit_order(x)))
+      |                                                     ^~~~~~~~~~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:58:59: note: in expansion of macro '__write_0_at'
+   58 | #define __write_at(x, y, bit)   ((bit)?__write_1_at(x, y):__write_0_at(x, y))
+      |                                                           ^~~~~~~~~~~~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:156:9: note: in expansion of macro '__write_at'
+  156 |         __write_at(xTL, y, color);
+      |         ^~~~~~~~~~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:51:42: note: each undeclared identifier is reported only once for each function it appears in
+   51 | #define __inv_mask(i)           (~__mask(x))
+      |                                          ^
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:50:38: note: in definition of macro '__mask'
+   50 | #define __mask(i)               (1<<(i))
+      |                                      ^
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:57:53: note: in expansion of macro '__inv_mask'
+   57 | #define __write_0_at(x, y)      (__byte_at(x, y) &= __inv_mask(__bit_order(x)))
+      |                                                     ^~~~~~~~~~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:58:59: note: in expansion of macro '__write_0_at'
+   58 | #define __write_at(x, y, bit)   ((bit)?__write_1_at(x, y):__write_0_at(x, y))
+      |                                                           ^~~~~~~~~~~~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:156:9: note: in expansion of macro '__write_at'
+  156 |         __write_at(xTL, y, color);
+      |         ^~~~~~~~~~
+/home/fus/Documents/hello_world/main/main.c: In function 'screen_test':
+/home/fus/Documents/hello_world/main/main.c:75:10: warning: unused variable 'd' [-Wunused-variable]
+   75 |     xy_t d = 5;
+      |          ^
+/home/fus/Documents/hello_world/main/main.c:74:10: warning: unused variable 'y' [-Wunused-variable]
+   74 |     xy_t y = 20;
+      |          ^
+/home/fus/Documents/hello_world/main/main.c:73:10: warning: unused variable 'x' [-Wunused-variable]
+   73 |     xy_t x = 40;
+      |          ^
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:79: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:5676: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

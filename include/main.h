@@ -17,9 +17,9 @@
 
 #define __scl OLED_SCL
 #define __sda OLED_SDA
-#define I2CCOM_LOG
+// #define I2CCOM_LOG
 // #define I2CCOM_LOG_DATAFRAME
-#define I2CCOM_LOG_LEVEL    2
+// #define I2CCOM_LOG_LEVEL    2
 
 #include "oled128x64.h"
 
@@ -50,7 +50,16 @@ enum OLED_STATE_T {
     OLED_TURNON_ALL_PIXEL = 0x2
 };
 
-
 /// BEQ - button event queue
 QueueHandle_t beq = NULL;
 
+int __random() {
+    static int core = 47;  // seed ban đầu
+    core = ( (core * 53719) ^ (core << 5) )
+         + ( (core >> 3) & 0x7FFF );
+    core = core - (core / 19);
+    core = core ^ (core << 7);
+
+    // kết quả trong khoảng 0..9999
+    return core % 10000;
+}

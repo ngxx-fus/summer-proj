@@ -1,0 +1,66 @@
+In file included from /home/fus/Documents/hello_world/include/main.h:24,
+                 from /home/fus/Documents/hello_world/main/main.c:1:
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h: In function 'oled_draw_empty_rect':
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:56:39: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+   56 | #define __xy_check(x, y)        (((x) >= __min_x) && ((x) <= __max_x) && \
+      |                                       ^~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:143:9: note: in expansion of macro '__xy_check'
+  143 |     if(!__xy_check(xTL, yTL))   return;
+      |         ^~~~~~~~~~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:57:38: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+   57 |                                 ((y) >= __min_y) && ((y) <= __max_y))
+      |                                      ^~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:143:9: note: in expansion of macro '__xy_check'
+  143 |     if(!__xy_check(xTL, yTL))   return;
+      |         ^~~~~~~~~~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:54:77: error: expected ';' before ')' token
+   54 | #define __write_at(x, y, bit)   ((bit)?__write_1_at(x, y):__write_0_at(x, y))
+      |                                                                             ^
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:148:9: note: in expansion of macro '__write_at'
+  148 |         __write_at(x, yTL, color);
+      |         ^~~~~~~~~~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:54:77: error: expected statement before ')' token
+   54 | #define __write_at(x, y, bit)   ((bit)?__write_1_at(x, y):__write_0_at(x, y))
+      |                                                                             ^
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:148:9: note: in expansion of macro '__write_at'
+  148 |         __write_at(x, yTL, color);
+      |         ^~~~~~~~~~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:54:77: error: expected ';' before ')' token
+   54 | #define __write_at(x, y, bit)   ((bit)?__write_1_at(x, y):__write_0_at(x, y))
+      |                                                                             ^
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:149:9: note: in expansion of macro '__write_at'
+  149 |         __write_at(x, yBR, color);
+      |         ^~~~~~~~~~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:54:77: error: expected statement before ')' token
+   54 | #define __write_at(x, y, bit)   ((bit)?__write_1_at(x, y):__write_0_at(x, y))
+      |                                                                             ^
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:149:9: note: in expansion of macro '__write_at'
+  149 |         __write_at(x, yBR, color);
+      |         ^~~~~~~~~~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:54:77: error: expected ';' before ')' token
+   54 | #define __write_at(x, y, bit)   ((bit)?__write_1_at(x, y):__write_0_at(x, y))
+      |                                                                             ^
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:152:9: note: in expansion of macro '__write_at'
+  152 |         __write_at(xTL, y, color);
+      |         ^~~~~~~~~~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:54:77: error: expected statement before ')' token
+   54 | #define __write_at(x, y, bit)   ((bit)?__write_1_at(x, y):__write_0_at(x, y))
+      |                                                                             ^
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:152:9: note: in expansion of macro '__write_at'
+  152 |         __write_at(xTL, y, color);
+      |         ^~~~~~~~~~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:54:77: error: expected ';' before ')' token
+   54 | #define __write_at(x, y, bit)   ((bit)?__write_1_at(x, y):__write_0_at(x, y))
+      |                                                                             ^
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:153:9: note: in expansion of macro '__write_at'
+  153 |         __write_at(xBR, y, color);
+      |         ^~~~~~~~~~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:54:77: error: expected statement before ')' token
+   54 | #define __write_at(x, y, bit)   ((bit)?__write_1_at(x, y):__write_0_at(x, y))
+      |                                                                             ^
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:153:9: note: in expansion of macro '__write_at'
+  153 |         __write_at(xBR, y, color);
+      |         ^~~~~~~~~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:79: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:5676: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

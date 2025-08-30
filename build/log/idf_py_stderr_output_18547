@@ -1,0 +1,18 @@
+In file included from /home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:4,
+                 from /home/fus/Documents/hello_world/include/main.h:24,
+                 from /home/fus/Documents/hello_world/main/main.c:1:
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:127:17: error: '#' is not followed by a macro parameter
+  127 | #define get_scl() #define get_scl() ((GPIO.in >> __sda) & 0x1)
+      |                 ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:132:17: error: '#' is not followed by a macro parameter
+  132 | #define get_scl() #define get_scl() ((GPIO.in >> __scl) & 0x1)
+      |                 ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h: In function 'i2c_get_response':
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:288:11: error: implicit declaration of function 'get_sda'; did you mean 'set_sda'? [-Werror=implicit-function-declaration]
+  288 |     res = get_sda();
+      |           ^~~~~~~
+      |           set_sda
+cc1: some warnings being treated as errors
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:79: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:5676: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

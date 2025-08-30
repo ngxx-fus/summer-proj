@@ -1,0 +1,15 @@
+In file included from /home/fus/Documents/hello_world/include/main.h:24,
+                 from /home/fus/Documents/hello_world/main/main.c:1:
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h: In function 'oled_draw_empty_rect':
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:60:39: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+   60 | #define __xy_check(x, y)        (((x) >= __min_x) && ((x) <= __max_x) && \
+      |                                       ^~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:147:9: note: in expansion of macro '__xy_check'
+  147 |     if(!__xy_check(xTL, yTL))   return;
+      |         ^~~~~~~~~~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:61:38: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+   61 |                                 ((y) >= __min_y) && ((y) <= __max_y))
+      |                                      ^~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:147:9: note: in expansion of macro '__xy_check'
+  147 |     if(!__xy_check(xTL, yTL))   return;
+      |         ^~~~~~~~~~

@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "hello_world",
-    "project_version":    "1",
+    "project_version":    "65a3a8f-dirty",
     "project_path":       "/home/fus/Documents/hello_world",
     "idf_path":           "/home/fus/.fus/esp-idf",
     "build_dir":          "/home/fus/Documents/hello_world/build",

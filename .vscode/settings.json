@@ -10,7 +10,11 @@
         "stdarg.h": "c",
         "esp_timer.h": "c",
         "ets_sys.h": "c",
-        "oled128x64.h": "c"
+        "oled128x64.h": "c",
+        "freertos.h": "c",
+        "cstdint": "c",
+        "stdbool.h": "c",
+        "random": "c"
     },
     "cmake.cmakePath": "/usr/bin/cmake",
     "cmake.configureSettings": {
