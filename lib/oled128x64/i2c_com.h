@@ -122,8 +122,8 @@ Normal send (write op):
 #endif
 
 #ifndef wait_for_scl
-// #define wait_for_scl 
-#define wait_for_scl for(uint32_t t_wait = 0; t_wait < 1000 && get_scl() == 0; ++t_wait) i2c_com_delay(1);
+#define wait_for_scl 
+// #define wait_for_scl for(uint32_t t_wait = 0; t_wait < 1000 && get_scl() == 0; ++t_wait) i2c_com_delay(1);
 #endif 
 
 #ifndef i2c_spinlock
