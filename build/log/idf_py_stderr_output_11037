@@ -1,0 +1,12 @@
+In file included from /home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:4,
+                 from /home/fus/Documents/hello_world/include/main.h:19,
+                 from /home/fus/Documents/hello_world/main/main.c:1:
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h: In function '__cyg_profile_func_enter':
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:62:5: error: implicit declaration of function 'ets_printf'; did you mean 'vsiprintf'? [-Werror=implicit-function-declaration]
+   62 |     ets_printf("Enter: %p (from %p)\n", this_fn, call_site);
+      |     ^~~~~~~~~~
+      |     vsiprintf
+cc1: some warnings being treated as errors
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:79: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:5676: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

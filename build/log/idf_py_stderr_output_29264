@@ -1,0 +1,9 @@
+In file included from /home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:4,
+                 from /home/fus/Documents/hello_world/include/main.h:18,
+                 from /home/fus/Documents/hello_world/main/main.c:1:
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:192:1: error: duplicate 'static'
+  192 | static inline static inline uint8_t i2c_get_response(){
+      | ^~~~~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:79: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:5676: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

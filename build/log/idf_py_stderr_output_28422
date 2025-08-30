@@ -1,0 +1,19 @@
+In file included from /home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:4,
+                 from /home/fus/Documents/hello_world/include/main.h:23,
+                 from /home/fus/Documents/hello_world/main/main.c:1:
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h: In function 'i2c_send_data_frame':
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:246:87: error: 'i' undeclared (first use in this function)
+  246 |         i2ccom_log("[t=%lldus] Send <0x%02X>", (long long) esp_timer_get_time(), data[i]);
+      |                                                                                       ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:63:79: note: in definition of macro 'i2ccom_log'
+   63 |         #define i2ccom_log(fmt, ...) ets_printf("[I2CCOM] [LOG] " fmt "\n", ##__VA_ARGS__)
+      |                                                                               ^~~~~~~~~~~
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:246:87: note: each undeclared identifier is reported only once for each function it appears in
+  246 |         i2ccom_log("[t=%lldus] Send <0x%02X>", (long long) esp_timer_get_time(), data[i]);
+      |                                                                                       ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:63:79: note: in definition of macro 'i2ccom_log'
+   63 |         #define i2ccom_log(fmt, ...) ets_printf("[I2CCOM] [LOG] " fmt "\n", ##__VA_ARGS__)
+      |                                                                               ^~~~~~~~~~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:79: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:5676: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

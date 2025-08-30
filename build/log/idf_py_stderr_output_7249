@@ -1,0 +1,11 @@
+In file included from /home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:4,
+                 from /home/fus/Documents/hello_world/include/main.h:23,
+                 from /home/fus/Documents/hello_world/main/main.c:1:
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h: In function 'i2c_send_byte_array_w_ctl_byte':
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:394:16: error: 'i' undeclared (first use in this function)
+  394 |         return i;
+      |                ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:394:16: note: each undeclared identifier is reported only once for each function it appears in
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:79: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:5676: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

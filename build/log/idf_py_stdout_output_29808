@@ -1,0 +1,145 @@
+-- The C compiler identification is GNU 13.2.0
+-- The CXX compiler identification is GNU 13.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32-elf-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- git rev-parse returned 'fatal: not a git repository (or any of the parent directories): .git'
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32
+-- Project sdkconfig file /home/fus/Documents/hello_world/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- App "hello_world" version: 1
+-- Adding linker script /home/fus/Documents/hello_world/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /home/fus/.fus/esp-idf/components/esp_system/ld/esp32/sections.ld.in
+-- Adding linker script /home/fus/.fus/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /home/fus/.fus/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /home/fus/.fus/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /home/fus/.fus/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script /home/fus/.fus/esp-idf/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script /home/fus/.fus/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script /home/fus/.fus/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: /home/fus/.fus/esp-idf/components/app_trace /home/fus/.fus/esp-idf/components/app_update /home/fus/.fus/esp-idf/components/bootloader /home/fus/.fus/esp-idf/components/bootloader_support /home/fus/.fus/esp-idf/components/bt /home/fus/.fus/esp-idf/components/cmock /home/fus/.fus/esp-idf/components/console /home/fus/.fus/esp-idf/components/cxx /home/fus/.fus/esp-idf/components/driver /home/fus/.fus/esp-idf/components/efuse /home/fus/.fus/esp-idf/components/esp-tls /home/fus/.fus/esp-idf/components/esp_adc /home/fus/.fus/esp-idf/components/esp_app_format /home/fus/.fus/esp-idf/components/esp_bootloader_format /home/fus/.fus/esp-idf/components/esp_coex /home/fus/.fus/esp-idf/components/esp_common /home/fus/.fus/esp-idf/components/esp_eth /home/fus/.fus/esp-idf/components/esp_event /home/fus/.fus/esp-idf/components/esp_gdbstub /home/fus/.fus/esp-idf/components/esp_hid /home/fus/.fus/esp-idf/components/esp_http_client /home/fus/.fus/esp-idf/components/esp_http_server /home/fus/.fus/esp-idf/components/esp_https_ota /home/fus/.fus/esp-idf/components/esp_https_server /home/fus/.fus/esp-idf/components/esp_hw_support /home/fus/.fus/esp-idf/components/esp_lcd /home/fus/.fus/esp-idf/components/esp_local_ctrl /home/fus/.fus/esp-idf/components/esp_mm /home/fus/.fus/esp-idf/components/esp_netif /home/fus/.fus/esp-idf/components/esp_netif_stack /home/fus/.fus/esp-idf/components/esp_partition /home/fus/.fus/esp-idf/components/esp_phy /home/fus/.fus/esp-idf/components/esp_pm /home/fus/.fus/esp-idf/components/esp_psram /home/fus/.fus/esp-idf/components/esp_ringbuf /home/fus/.fus/esp-idf/components/esp_rom /home/fus/.fus/esp-idf/components/esp_system /home/fus/.fus/esp-idf/components/esp_timer /home/fus/.fus/esp-idf/components/esp_wifi /home/fus/.fus/esp-idf/components/espcoredump /home/fus/.fus/esp-idf/components/esptool_py /home/fus/.fus/esp-idf/components/fatfs /home/fus/.fus/esp-idf/components/freertos /home/fus/.fus/esp-idf/components/hal /home/fus/.fus/esp-idf/components/heap /home/fus/.fus/esp-idf/components/http_parser /home/fus/.fus/esp-idf/components/idf_test /home/fus/.fus/esp-idf/components/ieee802154 /home/fus/.fus/esp-idf/components/json /home/fus/.fus/esp-idf/components/log /home/fus/.fus/esp-idf/components/lwip /home/fus/Documents/hello_world/main /home/fus/.fus/esp-idf/components/mbedtls /home/fus/.fus/esp-idf/components/mqtt /home/fus/.fus/esp-idf/components/newlib /home/fus/.fus/esp-idf/components/nvs_flash /home/fus/.fus/esp-idf/components/nvs_sec_provider /home/fus/.fus/esp-idf/components/openthread /home/fus/.fus/esp-idf/components/partition_table /home/fus/.fus/esp-idf/components/perfmon /home/fus/.fus/esp-idf/components/protobuf-c /home/fus/.fus/esp-idf/components/protocomm /home/fus/.fus/esp-idf/components/pthread /home/fus/.fus/esp-idf/components/sdmmc /home/fus/.fus/esp-idf/components/soc /home/fus/.fus/esp-idf/components/spi_flash /home/fus/.fus/esp-idf/components/spiffs /home/fus/.fus/esp-idf/components/tcp_transport /home/fus/.fus/esp-idf/components/ulp /home/fus/.fus/esp-idf/components/unity /home/fus/.fus/esp-idf/components/usb /home/fus/.fus/esp-idf/components/vfs /home/fus/.fus/esp-idf/components/wear_levelling /home/fus/.fus/esp-idf/components/wifi_provisioning /home/fus/.fus/esp-idf/components/wpa_supplicant /home/fus/.fus/esp-idf/components/xtensa
+-- Configuring done (6.0s)
+-- Generating done (1.3s)
+-- Build files have been written to: /home/fus/Documents/hello_world/build
+[  0%] Built target custom_bundle
+[  0%] Built target partition_table_bin
+[  0%] Built target _project_elf_src
+[  0%] Built target memory_ld
+[  0%] Performing build step for 'bootloader'
+[  0%] Built target __idf_esp_https_ota
+[  1%] Built target __idf_esp_http_server
+[  1%] Built target _project_elf_src
+[  5%] Built target __idf_log
+[ 11%] Built target __idf_esp_rom
+[  2%] Built target __idf_esp_http_client
+[ 13%] Built target __idf_esp_common
+[  2%] Built target __idf_tcp_transport
+[ 22%] Built target __idf_esp_hw_support
+[  3%] Built target __idf_esp_gdbstub
+[ 24%] Built target __idf_esp_system
+[  5%] Built target __idf_esp_eth
+[ 31%] Built target __idf_efuse
+[  6%] Built target __idf_esp_adc
+[ 54%] Built target __idf_bootloader_support
+[ 56%] Built target __idf_esp_bootloader_format
+[  7%] Built target __idf_esp-tls
+[ 57%] Built target __idf_spi_flash
+[  7%] Built target __idf_http_parser
+[ 64%] Built target __idf_hal
+[  8%] Built target __idf_esp_wifi
+[ 67%] Built target __idf_micro-ecc
+[  8%] Built target __idf_esp_coex
+[ 90%] Built target __idf_soc
+[ 93%] Built target __idf_xtensa
+[ 95%] Built target __idf_main
+[ 98%] Built target bootloader.elf
+[ 17%] Built target __idf_wpa_supplicant
+[100%] Built target gen_project_binary
+[ 18%] Built target __idf_esp_netif
+Bootloader binary size 0x6850 bytes. 0x7b0 bytes (7%) free.
+[100%] Built target bootloader_check_size
+[100%] Built target app
+[ 19%] No install step for 'bootloader'
+[ 28%] Built target __idf_lwip
+[ 28%] Completed 'bootloader'
+[ 29%] Built target __idf_vfs
+[ 29%] Built target bootloader
+[ 29%] Built target __idf_esp_phy
+[ 30%] Built target __idf_nvs_flash
+[ 30%] Built target __idf_esp_event
+[ 30%] Built target __idf_esp_timer
+[ 30%] Built target __idf_esp_common
+[ 31%] Built target __idf_cxx
+[ 33%] Built target __idf_newlib
+[ 35%] Built target __idf_freertos
+[ 39%] Built target __idf_esp_hw_support
+[ 42%] Built target __idf_soc
+[ 43%] Built target __idf_heap
+[ 44%] Built target __idf_log
+[ 49%] Built target __idf_hal
+[ 50%] Built target __idf_esp_rom
+[ 54%] Built target __idf_esp_system
+[ 55%] Built target __idf_pthread
+[ 57%] Built target __idf_spi_flash
+[ 57%] Built target __idf_app_update
+[ 58%] Built target __idf_esp_partition
+[ 60%] Built target __idf_bootloader_support
+[ 60%] Built target __idf_esp_app_format
+[ 60%] Built target __idf_esp_bootloader_format
+[ 63%] Built target mbedtls
+[ 64%] Built target mbedx509
+[ 74%] Built target mbedcrypto
+[ 74%] Built target p256m
+[ 75%] Built target everest
+[ 75%] Built target __idf_mbedtls
+[ 76%] Built target __idf_esp_pm
+[ 82%] Built target __idf_driver
+[ 82%] Built target __idf_esp_mm
+[ 83%] Built target __idf_efuse
+[ 83%] Built target __idf_esp_ringbuf
+[ 84%] Built target __idf_xtensa
+[ 84%] Built target __idf_protobuf-c
+[ 85%] Built target __idf_sdmmc
+[ 85%] Built target __idf_esp_hid
+[ 85%] Built target __idf_app_trace
+[ 87%] Built target __idf_console
+[ 88%] Built target __idf_unity
+[ 88%] Built target __idf_json
+[ 89%] Built target __idf_espcoredump
+[ 90%] Built target __idf_esp_lcd
+[ 91%] Built target __idf_wear_levelling
+[ 92%] Built target __idf_perfmon
+[ 93%] Built target __idf_mqtt
+[ 93%] Built target __idf_nvs_sec_provider
+[ 93%] Built target __idf_cmock
+[ 94%] Built target __idf_spiffs
+[ 95%] Built target __idf_protocomm
+[ 96%] Built target __idf_fatfs
+[ 97%] Built target __idf_esp_local_ctrl
+[ 98%] Built target __idf_wifi_provisioning
+[ 98%] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[100%] Linking C static library libmain.a
+[100%] Built target __idf_main
+[100%] Generating ld/sections.ld
+[100%] Built target __ldgen_output_sections.ld
+[100%] Linking CXX executable hello_world.elf
+[100%] Built target hello_world.elf
+[100%] Generating binary image from built executable
+esptool.py v4.9.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/fus/Documents/hello_world/build/hello_world.bin
+[100%] Built target gen_project_binary
+hello_world.bin binary size 0x2e670 bytes. Smallest app partition is 0x100000 bytes. 0xd1990 bytes (82%) free.
+[100%] Built target app_check_size
+[100%] Built target app

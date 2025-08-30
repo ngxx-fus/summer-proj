@@ -1,0 +1,83 @@
+In file included from /home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:4,
+                 from /home/fus/Documents/hello_world/include/main.h:22,
+                 from /home/fus/Documents/hello_world/main/main.c:1:
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h: In function 'i2c_config_headers':
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:146:50: error: operator '>' has no left operand
+  146 |     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0)
+      |                                                  ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:170:50: error: operator '>' has no left operand
+  170 |     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0)
+      |                                                  ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h: In function 'i2c_start_condition':
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:176:50: error: operator '>' has no left operand
+  176 |     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x3)
+      |                                                  ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:184:50: error: operator '>' has no left operand
+  184 |     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x3)
+      |                                                  ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h: In function 'i2c_stop_condition':
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:190:50: error: operator '>' has no left operand
+  190 |     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x3)
+      |                                                  ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:198:50: error: operator '>' has no left operand
+  198 |     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x3)
+      |                                                  ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h: In function 'scl_mono_pulse':
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:204:50: error: operator '>' has no left operand
+  204 |     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x4)
+      |                                                  ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:213:50: error: operator '>' has no left operand
+  213 |     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x4)
+      |                                                  ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h: In function 'i2c_send_address_frame':
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:219:50: error: operator '>' has no left operand
+  219 |     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x2)
+      |                                                  ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:232:50: error: operator '>' has no left operand
+  232 |     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x2)
+      |                                                  ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h: In function 'i2c_send_data_frame':
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:238:50: error: operator '>' has no left operand
+  238 |     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x2)
+      |                                                  ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:248:50: error: operator '>' has no left operand
+  248 |     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x2)
+      |                                                  ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h: In function 'i2c_get_response':
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:254:50: error: operator '>' has no left operand
+  254 |     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x5)
+      |                                                  ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:267:50: error: operator '>' has no left operand
+  267 |     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x5)
+      |                                                  ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h: In function 'i2c_send_byte':
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:274:50: error: operator '>' has no left operand
+  274 |     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x1)
+      |                                                  ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:290:50: error: operator '>' has no left operand
+  290 |     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x1)
+      |                                                  ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h: In function 'i2c_send_word':
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:297:50: error: operator '>' has no left operand
+  297 |     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x1)
+      |                                                  ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:328:50: error: operator '>' has no left operand
+  328 |     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x1)
+      |                                                  ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h: In function 'i2c_send_byte_array':
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:335:50: error: operator '>' has no left operand
+  335 |     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x0)
+      |                                                  ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:360:50: error: operator '>' has no left operand
+  360 |     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x0)
+      |                                                  ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h: In function 'i2c_send_byte_array_w_ctl_byte':
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:367:50: error: operator '>' has no left operand
+  367 |     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x0)
+      |                                                  ^
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:399:50: error: operator '>' has no left operand
+  399 |     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x0)
+      |                                                  ^
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:79: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:5676: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

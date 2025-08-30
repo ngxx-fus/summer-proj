@@ -1,0 +1,9 @@
+idf_component_register(
+    SRCS 
+        "main.c"
+    INCLUDE_DIRS 
+        "."
+        "../include"
+        "../lib/oled128x64"
+        "../lib/text_utils"
+)

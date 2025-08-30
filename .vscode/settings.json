@@ -1,0 +1,19 @@
+{
+    "files.associations": {
+        "stdint.h": "c",
+        "optional": "c",
+        "variant": "c",
+        "main.h": "c",
+        "esp_log.h": "c",
+        "gpio.h": "c",
+        "esp_rom_sys.h": "c",
+        "stdarg.h": "c",
+        "esp_timer.h": "c",
+        "ets_sys.h": "c",
+        "oled128x64.h": "c"
+    },
+    "cmake.cmakePath": "/usr/bin/cmake",
+    "cmake.configureSettings": {
+    "CMAKE_TOOLCHAIN_FILE": "/home/fus/.fus/esp-idf/tools/cmake/toolchain-esp32.cmake"
+    }
+}

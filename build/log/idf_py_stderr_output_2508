@@ -1,0 +1,17 @@
+In file included from /home/fus/Documents/hello_world/include/main.h:24,
+                 from /home/fus/Documents/hello_world/main/main.c:1:
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h: In function 'oled_flush':
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:61:70: warning: passing argument 3 of 'i2c_send_byte_array_w_ctl_byte' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   61 |     i2c_send_byte_array_w_ctl_byte(OLED128X64_ADDR, SSD1306_COMMAND, oled_canvas, sizeof(oled_canvas));
+      |                                                                      ^~~~~~~~~~~
+In file included from /home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:4:
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:375:88: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'volatile uint8_t *' {aka 'volatile unsigned char *'}
+  375 | uint8_t i2c_send_byte_array_w_ctl_byte(uint8_t address_7bit, uint8_t ctl_byte, uint8_t data[], uint32_t array_size){
+      |                                                                                ~~~~~~~~^~~~~~
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h: In function 'oled_flush_area':
+/home/fus/Documents/hello_world/lib/oled128x64/oled128x64.h:80:71: warning: passing argument 3 of 'i2c_send_byte_array_w_ctl_byte' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   80 |         i2c_send_byte_array_w_ctl_byte(OLED128X64_ADDR, SSD1306_DATA, &oled_canvas[offset], len);
+      |                                                                       ^~~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/hello_world/lib/oled128x64/i2c_com.h:375:88: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'volatile uint8_t *' {aka 'volatile unsigned char *'}
+  375 | uint8_t i2c_send_byte_array_w_ctl_byte(uint8_t address_7bit, uint8_t ctl_byte, uint8_t data[], uint32_t array_size){
+      |                                                                                ~~~~~~~~^~~~~~

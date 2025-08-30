@@ -1,0 +1,36 @@
+esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.obj: \
+ /home/fus/.fus/esp-idf/components/protocomm/proto-c/sec0.pb-c.c \
+ /home/fus/.fus/esp-idf/components/protocomm/proto-c/sec0.pb-c.h \
+ /home/fus/.fus/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h \
+ /home/fus/.fus/esp-idf/components/newlib/platform_include/assert.h \
+ /home/fus/Documents/hello_world/build/config/sdkconfig.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/stdlib.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/ieeefp.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/_ansi.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/newlib.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/_newlib_version.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/config.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/features.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/stddef.h \
+ /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/reent.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/_ansi.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_types.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/_types.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/_default_types.h \
+ /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/lock.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/cdefs.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/stdlib.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/alloca.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_locale.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/stdint.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/stdint.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_intsup.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_stdint.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/assert.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/limits.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/syslimits.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/limits.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/syslimits.h \
+ /home/fus/.fus/esp-idf/components/protocomm/proto-c/constants.pb-c.h
