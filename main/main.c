@@ -87,10 +87,8 @@ void screen_test(void *pvParameters) {
     for( ; ; ){
         xy_t x = ((random()%64)+64)%64;
         xy_t y = ((random()%128)+128)%128;
-        xy_t x1 = (random()%2)?x:(2*x);
-        xy_t y1 = (random()%y)?x:(2*y);
         xy_t d = ((random()%3)+3)%3;
-        oled_draw_empty_rect(x, y, x1, y1, d, (random()%2)?COLOR_BLACK:COLOR_WHITE);
+        oled_draw_empty_rect(x, y, x+15, y+15, d, (random()%2)?COLOR_BLACK:COLOR_WHITE);
         vTaskDelay(1);
         oled_flush();
         vTaskDelay(1);

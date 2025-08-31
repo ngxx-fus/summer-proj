@@ -12,17 +12,72 @@ This project was made to review (or practice) FreeRTOS.
 -   LEDs (Two LED with 1KOhm resistor)
 -   Variable resistance (Voltage divider circuit, 0->3.3V)
 
-## VSCode-PlatformIO Config 
+## Dir-tree
 
-```ini
-[env:esp32doit-devkit-v1]
-platform = espressif32
-board = esp32doit-devkit-v1
-framework = espidf
+```
+    .
+    ├── CMakeLists.txt
+    ├── build
+    │   ├── CMakeCache.txt
+    │   ├── CMakeFiles
+    │   ├── Makefile
+    │   ├── ...
+    │   └── hello_world.elf
+    ├── imgs
+    │   ├── i2c-arch.png
+    │   ├── i2c-byte-ctl.png
+    │   └── i2c-pixel-access.png
+    ├── lib
+    │   ├── README
+    │   ├── oled128x64
+    │   │   ├── i2c_com.h
+    │   │   ├── oled128x64.h
+    │   │   └── oled128x64_cmds.h
+    │   └── text_utils
+    │       ├── font_data.h
+    │       └── gfxfont.h
+    ├── main
+    │   ├── CMakeLists.txt
+    │   └── main.c
+    ├── readme.md
+    ├── sdkconfig
+    └── sdkconfig.old
+```
 
-monitor_speed = 115200
-upload_speed = 921600
-upload_port = /dev/ttyUSB0
+## ESP-IDF
+
+### Install ESP-IDF
+
+#### Clone ESP-IDF and install
+
+```
+git clone -b v5.2 --recursive https://github.com/espressif/esp-idf.git path/to/install/folder
+cd path/to/install/folder
+./install.sh
+```
+
+E.g:  path/to/install/folder : /home/fus/.fus/esp-idf
+
+
+#### Add `export.sh` into system PATH
+
+Append this line into `~/.zshrc` / `~/.bashrc` / ...
+
+```
+export idf_path=/home/fus/.fus/esp-idf 
+export path=$path:$idf_path
+```
+
+#### Set-up env var before start project  
+
+```
+source export.sh
+```
+
+If you do not add `export.sh` to your path:
+
+```
+source /home/fus/.fus/esp-idf/export.sh
 ```
 
 # PART-1: Drivers
@@ -32,7 +87,9 @@ This part focuses on writing drivers to control I/O. Additionally, this part wil
 ## OLED (128x64) display 
 ### I2C Bit-banging
     
-    DONE :>
+<img style="width:800px;" src=imgs/i2c-arch.png>            <br>
+<img style="width:800px;" src=imgs/i2c-byte-ctl.png>        <br>
+<img style="width:800px;" src=imgs/i2c-pixel-access.png>
 
 ### Implement I2C in an RTOS
 

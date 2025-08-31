@@ -144,7 +144,7 @@ void oled_flush_area(uint8_t seg_start, uint8_t seg_end, uint8_t col_start, uint
     }
 }
 
-void oled_draw_empty_rect(xy_t xTL, xy_t yTL, xy_t xBR, xy_t yBR, xy_t edge_size, color_t color){
+void  (xy_t xTL, xy_t yTL, xy_t xBR, xy_t yBR, xy_t edge_size, color_t color){
     if(edge_size < 1)           return;
     if(!__xy_check(xTL, yTL))   return;
     if(xTL > xBR || yTL > yBR)  return;

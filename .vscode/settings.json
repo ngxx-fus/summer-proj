@@ -14,7 +14,9 @@
         "freertos.h": "c",
         "cstdint": "c",
         "stdbool.h": "c",
-        "random": "c"
+        "random": "c",
+        "gpio_ll.h": "c",
+        "gpio_struct.h": "c"
     },
     "cmake.cmakePath": "/usr/bin/cmake",
     "cmake.configureSettings": {

@@ -43,10 +43,9 @@ Normal send (write op):
 
 #include <stdarg.h>
 #include <stdint.h>
-#include "hal/gpio_ll.h"
-#include "soc/gpio_struct.h"
-#include "driver/gpio.h"
-#include "esp_rom_sys.h"
+#include "hal/gpio_ll.h"    // low level API
+#include "driver/gpio.h"    // safe API
+#include "esp_rom_sys.h"    // for delay
 
 #if defined(I2CCOM_LOG)
 
@@ -101,9 +100,6 @@ static inline void set_scl(int level) {
         GPIO.out_w1tc = (1 << __scl);
     }
 }
-
-
-
 #endif 
 
 #ifndef set_sda
